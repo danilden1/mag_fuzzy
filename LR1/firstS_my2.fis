@@ -1,0 +1,53 @@
+[System]
+Name='firstS_my2'
+Type='sugeno'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=9
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='x1'
+Range=[-8 8]
+NumMFs=3
+MF1='Низкий':'trimf',[-14.36 -7.958 -1.558]
+MF2='Средний':'trimf',[-6.4 0 6.4]
+MF3='Высокий':'trimf',[1.642 8.042 14.44]
+
+[Input2]
+Name='x2'
+Range=[-8 8]
+NumMFs=3
+MF1='Низкий':'trimf',[-14.4 -8 -1.6]
+MF2='Средний':'trimf',[-6.4 0 6.4]
+MF3='Высокий':'trimf',[1.6 8 14.4]
+
+[Output1]
+Name='y'
+Range=[0 1]
+NumMFs=9
+MF1='MM':'linear',[0 0 -9]
+MF2='ML':'linear',[0 11 22]
+MF3='LH':'linear',[11 -11 54]
+MF4='LM':'linear',[11 0 23]
+MF5='LL':'linear',[11 11 54]
+MF6='HH':'linear',[-11 -11 54]
+MF7='HM':'linear',[-11 0 23]
+MF8='HL':'linear',[-11 11 54]
+MF9='MH':'linear',[0 -11 23]
+
+[Rules]
+1 1, 5 (1) : 1
+1 2, 4 (1) : 1
+1 3, 3 (1) : 1
+2 1, 2 (1) : 1
+2 2, 1 (1) : 1
+2 3, 9 (1) : 1
+3 1, 8 (1) : 1
+3 2, 7 (1) : 1
+3 3, 6 (1) : 1
