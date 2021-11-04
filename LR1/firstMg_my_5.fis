@@ -1,0 +1,69 @@
+[System]
+Name='firstMg_my_5'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='x1'
+Range=[-8 8]
+NumMFs=5
+MF1='Низкий':'gaussmf',[2.717 -8]
+MF2='Средний':'gaussmf',[2.717 0]
+MF3='Высокий':'gaussmf',[2.717 8]
+MF4='НизС':'gaussmf',[2.717 -4]
+MF5='ВысС':'gaussmf',[2.717 4]
+
+[Input2]
+Name='x2'
+Range=[-8 8]
+NumMFs=5
+MF1='Низкий':'gaussmf',[2.717 -8]
+MF2='Средний':'gaussmf',[2.717 0]
+MF3='Высокий':'gaussmf',[2.717 8]
+MF4='НизС':'gaussmf',[2.717 -4]
+MF5='ВысС':'gaussmf',[2.717 4]
+
+[Output1]
+Name='y'
+Range=[-120 0]
+NumMFs=5
+MF1='Низкий':'gaussmf',[12.74 -120]
+MF2='Ниже-среднего':'gaussmf',[12.74 -90]
+MF3='Средний':'gaussmf',[12.74 -60]
+MF4='Выше-среднего':'gaussmf',[12.74 -30]
+MF5='Высокий':'gaussmf',[12.74 0]
+
+[Rules]
+1 1, 1 (1) : 1
+1 4, 2 (1) : 1
+1 2, 3 (1) : 1
+1 5, 2 (1) : 1
+1 3, 1 (1) : 1
+4 1, 2 (1) : 1
+4 4, 3 (1) : 1
+4 2, 4 (1) : 1
+4 5, 3 (1) : 1
+4 3, 2 (1) : 1
+2 1, 3 (1) : 1
+2 4, 4 (1) : 1
+2 2, 5 (1) : 1
+2 5, 4 (1) : 1
+2 3, 3 (1) : 1
+5 1, 2 (1) : 1
+5 4, 3 (1) : 1
+5 2, 4 (1) : 1
+5 5, 3 (1) : 1
+5 3, 2 (1) : 1
+3 1, 1 (1) : 1
+3 4, 2 (1) : 1
+3 2, 3 (1) : 1
+3 5, 2 (1) : 1
+3 3, 1 (1) : 1
