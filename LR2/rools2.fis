@@ -1,0 +1,46 @@
+[System]
+Name='rools2'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='distance'
+Range=[0 100]
+NumMFs=3
+MF1='близко':'trimf',[-41.67 0 41.67]
+MF2='средне':'trimf',[8.333 50 91.67]
+MF3='далеко':'trimf',[58.33 100 141.7]
+
+[Input2]
+Name='speed_diff'
+Range=[-50 50]
+NumMFs=3
+MF1='сближение':'trimf',[-91.67 -50 -8.333]
+MF2='равномерно':'trimf',[-41.67 0 41.67]
+MF3='удаление':'trimf',[8.333 50 91.67]
+
+[Input3]
+Name='weather'
+Range=[0 1]
+NumMFs=3
+MF1='сухо':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='дождь':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='снег':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Output1]
+Name='braking_force'
+Range=[0 1]
+NumMFs=3
+MF1='не_тормозим':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='слабо_тормозим':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='сильно_тормрзим':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Rules]
