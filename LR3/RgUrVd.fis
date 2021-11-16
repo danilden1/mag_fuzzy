@@ -16,7 +16,7 @@ Name='OtkUr'
 Range=[-1 1]
 NumMFs=3
 MF1='NB':'gaussmf',[0.3397 -1]
-MF2='ZE':'gaussmf',[0.3397 1.388e-17]
+MF2='ZE':'gaussmf',[0.3397 0]
 MF3='PB':'gaussmf',[0.3397 1]
 
 [Input2]
@@ -24,7 +24,7 @@ Name='IzmUr'
 Range=[-0.1 0.1]
 NumMFs=2
 MF1='NB':'gaussmf',[0.03398 -0.1]
-MF2='PB':'gaussmf',[0.03398 0.1]
+MF2='PB':'gaussmf',[0.03397 0.1]
 
 [Output1]
 Name='SkorZdv'
