@@ -1,0 +1,44 @@
+[System]
+Name='RgUrVd'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=5
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='OtkUr'
+Range=[-1 1]
+NumMFs=3
+MF1='NB':'gaussmf',[0.3397 -1]
+MF2='ZE':'gaussmf',[0.3397 0]
+MF3='PB':'gaussmf',[0.3397 1]
+
+[Input2]
+Name='IzmUr'
+Range=[-0.1 0.1]
+NumMFs=2
+MF1='NB':'gaussmf',[0.03398 -0.1]
+MF2='PB':'gaussmf',[0.03397 0.1]
+
+[Output1]
+Name='SkorZdv'
+Range=[-1 1]
+NumMFs=5
+MF1='NB':'trimf',[-1 -0.9 -0.7]
+MF2='NM':'trimf',[-0.6 -0.5 -0.4]
+MF3='ZE':'trimf',[-0.2 0 0.2]
+MF4='PM':'trimf',[0.4 0.5 0.6]
+MF5='PB':'trimf',[0.7 0.9 1]
+
+[Rules]
+2 0, 3 (1) : 1
+3 0, 5 (0.5) : 1
+1 0, 1 (0.5) : 1
+2 2, 2 (0.7) : 1
+2 1, 4 (0.7) : 1
